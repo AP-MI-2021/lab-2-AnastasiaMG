@@ -28,30 +28,30 @@ def test_is_palindrome():
     assert is_palindrome(101) == True
 
 
-test_is_palindrome()
 
 
-def input_is_palindrome():
+
+'''def input_is_palindrome():
     x = int(input("Fct verif daca un nr este palindrom."))
     if is_palindrome(x):
         print(x, "este palindrom.")
     else:
         print(x, "nu este palindrom.")
 input_is_palindrome()
-
+'''
 
 
 #1)
-def is_prime(x):
+def is_prime(n):
     '''Verifica daca un numar este prim
-    :param x : un numar intreg
+    :param n : un numar intreg
     :return : daca un nr e sau nu prim
     '''
-    if x < 2:
+    if n < 2:
         return False
 
-    for i in range(2, x // 2 + 1):
-        if x % i == 0:
+    for i in range(2, n // 2 + 1):
+        if n % i == 0:
             return False
 
     return True
@@ -64,6 +64,28 @@ def test_is_prime():
     assert is_prime(9) == False
     assert is_prime(1) == False
 
-test_is_prime()
 
-	
+
+def printMenu():
+    print("1. Dati nr n: ")
+    print("2. Verifica daca numarul este palindrom")
+    print("3. Verifica daca numarul este prim")
+    print("4. Iesire")
+
+def main():
+    test_is_prime()
+    test_is_palindrome()
+    while True:
+        printMenu()
+        optiune = input("Dati optiune: ")
+        if optiune == "1":
+            n = int(input("Dati nr n: "))
+        elif optiune == "2":
+            print(is_palindrome(n))
+        elif optiune == "3":
+            print(is_prime(n))
+        elif optiune == "4":
+            break
+        else:
+            print("Optiune gresita")
+main()
