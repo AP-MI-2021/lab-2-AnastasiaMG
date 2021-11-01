@@ -1,4 +1,4 @@
-5)
+#5)
 def is_palindrome(n) -> bool:
     """Verif daca nr dat este un palindrom
     :param n:  Nr care este verificat
@@ -41,7 +41,7 @@ input_is_palindrome()
 
 
 
-1)
+#1)
 def is_prime(x):
     '''Verifica daca un numar este prim
     :param x : un numar intreg
@@ -65,3 +65,5 @@ def test_is_prime():
     assert is_prime(1) == False
 
 test_is_prime()
+
+	
